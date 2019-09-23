@@ -1,16 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-
+using UnityEngine;    
 public class CharacterBehavior : MonoBehaviour
 {
     public float speed;
     [SerializeField] private float _currentSpeed;
 
+    private UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
+    private Vector3 m_Move;
+
     // Start is called before the first frame update
     void Start()
     {
-    
+        m_Character = GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>();
+    }
+
+    // Fixed update is called in sync with physics
+    private void FixedUpdate()
+    {
+        // pass all parameters to the character control script
+        m_Character.Move(m_Move, false, false);
     }
 
     // Update is called once per frame
@@ -21,7 +30,7 @@ public class CharacterBehavior : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.Space))
             _currentSpeed = 0;
 
-        transform.position += Vector3.right * _currentSpeed;
+        m_Move = Vector3.right * _currentSpeed;
     }
 
     public void ResetTransform(Transform resetTransform)
