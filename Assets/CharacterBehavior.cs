@@ -23,4 +23,12 @@ public class CharacterBehavior : MonoBehaviour
 
         transform.position += Vector3.right * _currentSpeed;
     }
+
+    public void ResetTransform(Transform resetTransform)
+    {
+        _currentSpeed = 0;
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
+        transform.position = resetTransform.position;
+        transform.rotation = resetTransform.rotation;
+    }
 }
