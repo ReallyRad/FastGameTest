@@ -8,9 +8,12 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] CharacterBehavior _player;
 
+    public static LevelManager instance;
+
     // Start is called before the first frame update
     void Start()
     {
+        if (instance == null) instance = this;
         _player = FindObjectOfType<CharacterBehavior>();
     }
 
@@ -21,7 +24,7 @@ public class LevelManager : MonoBehaviour
             Reset();
     }
 
-    private void Reset()
+    public void Reset()
     {
         _player.ResetTransform(initialTransform);
     }

@@ -31,4 +31,10 @@ public class CharacterBehavior : MonoBehaviour
         transform.position = resetTransform.position;
         transform.rotation = resetTransform.rotation;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "LevelEnd")
+            LevelManager.instance.Reset();
+    }
 }
