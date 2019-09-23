@@ -4,32 +4,24 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Hemisphere
   m_Shader: {fileID: 4800000, guid: b577cc7e2b66f4521979fd57ca0c8417, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
+  disabledShaderPasses: []
   m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs: {}
+    serializedVersion: 3
+    m_TexEnvs: []
     m_Floats:
-      data:
-        first:
-          name: _Exposure
-        second: 1
+    - _Exposure: 1.2
     m_Colors:
-      data:
-        first:
-          name: _TopColor
-        second: {r: .349999994, g: .370000005, b: .419999987, a: 1}
-      data:
-        first:
-          name: _MiddleColor
-        second: {r: .150000006, g: .150000006, b: .150000006, a: 1}
-      data:
-        first:
-          name: _BottomColor
-        second: {r: .119999997, g: .129999995, b: .150000006, a: 1}
+    - _BottomColor: {r: 0, g: 0.62352943, b: 0.27697715, a: 1}
+    - _MiddleColor: {r: 0.60493135, g: 0.7169812, b: 0.5647918, a: 1}
+    - _TopColor: {r: 0.9811321, g: 0.86141396, b: 0.254539, a: 1}
