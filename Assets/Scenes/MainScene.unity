@@ -120,6 +120,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &81145045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 81145046}
+  - component: {fileID: 81145047}
+  m_Layer: 0
+  m_Name: DeathCollider
+  m_TagString: LevelEnd
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &81145046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81145045}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 33.217354, y: -8, z: 0}
+  m_LocalScale: {x: 2000, y: 1, z: 2000}
+  m_Children: []
+  m_Father: {fileID: 214669159}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &81145047
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81145045}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &214669158
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,6 +197,7 @@ Transform:
   - {fileID: 1759784215}
   - {fileID: 415600073}
   - {fileID: 992413905}
+  - {fileID: 81145046}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -226,12 +271,17 @@ PrefabInstance:
     - target: {fileID: 8022996434976054099, guid: 4d52d552a40fcdb41ba82e6df2a74cc3,
         type: 3}
       propertyPath: speed
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8022996434976054099, guid: 4d52d552a40fcdb41ba82e6df2a74cc3,
         type: 3}
       propertyPath: phase
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022996434976054099, guid: 4d52d552a40fcdb41ba82e6df2a74cc3,
+        type: 3}
+      propertyPath: amplitude
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d52d552a40fcdb41ba82e6df2a74cc3, type: 3}
@@ -414,12 +464,17 @@ PrefabInstance:
     - target: {fileID: 8022996434976054099, guid: 4d52d552a40fcdb41ba82e6df2a74cc3,
         type: 3}
       propertyPath: speed
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8022996434976054099, guid: 4d52d552a40fcdb41ba82e6df2a74cc3,
         type: 3}
       propertyPath: phase
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022996434976054099, guid: 4d52d552a40fcdb41ba82e6df2a74cc3,
+        type: 3}
+      propertyPath: amplitude
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d52d552a40fcdb41ba82e6df2a74cc3, type: 3}
@@ -493,12 +548,17 @@ PrefabInstance:
     - target: {fileID: 8022996434976054099, guid: 4d52d552a40fcdb41ba82e6df2a74cc3,
         type: 3}
       propertyPath: speed
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8022996434976054099, guid: 4d52d552a40fcdb41ba82e6df2a74cc3,
         type: 3}
       propertyPath: phase
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022996434976054099, guid: 4d52d552a40fcdb41ba82e6df2a74cc3,
+        type: 3}
+      propertyPath: amplitude
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d52d552a40fcdb41ba82e6df2a74cc3, type: 3}
@@ -1321,12 +1381,17 @@ PrefabInstance:
     - target: {fileID: 8022996434976054099, guid: 4d52d552a40fcdb41ba82e6df2a74cc3,
         type: 3}
       propertyPath: speed
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8022996434976054099, guid: 4d52d552a40fcdb41ba82e6df2a74cc3,
         type: 3}
       propertyPath: phase
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022996434976054099, guid: 4d52d552a40fcdb41ba82e6df2a74cc3,
+        type: 3}
+      propertyPath: amplitude
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d52d552a40fcdb41ba82e6df2a74cc3, type: 3}
